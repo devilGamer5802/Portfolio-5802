@@ -37,7 +37,7 @@
     --icon-color: var(--icon-color-blue); /* Default icon color */
     --location-tag-bg: rgba(0, 170, 255, 0.1);
     --location-tag-text: var(--icon-color-blue);
-    --cert-icon-color: #cccccc;
+    --cert-icon-color: #cccccc; /* Fallback for placeholder icon if used */
     --cert-placeholder-bg: rgba(255, 255, 255, 0.03);
     --theme-toggle-bg: #222;
     --theme-toggle-icon: var(--icon-color-blue);
@@ -62,7 +62,7 @@
     --icon-color-light: var(--button-blue-bg); /* Icon color for light theme */
     --location-tag-bg-light: rgba(0, 119, 204, 0.1);
     --location-tag-text-light: var(--button-blue-bg);
-    --cert-icon-color-light: #bbbbbb;
+    --cert-icon-color-light: #bbbbbb; /* Fallback for placeholder icon if used */
     --cert-placeholder-bg-light: #eeeeee;
     --theme-toggle-bg-light: #eee;
     --theme-toggle-icon-light: var(--button-blue-bg);
@@ -124,7 +124,7 @@ html { scroll-behavior: smooth; }
 }
 section:not(#hero) { background-color: var(--bg-section-dark); }
 body.light-theme section:not(#hero) { background-color: var(--bg-section-light); }
-/* Alternate backgrounds applied via specific section classes now if needed */
+/* Alternate backgrounds applied via specific section classes */
 #education, #projects, #frameworks, #footer { background-color: var(--bg-section-dark); }
 #skills, #contact { background-color: var(--bg-alt-color); }
 
@@ -236,9 +236,35 @@ body.light-theme .role-title {
 .edu-certs h4 { font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 10px; color: var(--text-color);}
 .cert-title-icon { color: var(--icon-color); } /* Blue */
 .edu-certs ul { list-style: none; }
-.cert-item { display: flex; align-items: center; gap: 15px; margin-bottom: 15px; }
-.cert-image-placeholder { width: 50px; height: 50px; /* Square */ background-color: var(--cert-placeholder-bg); border: 1px dashed var(--card-border); border-radius: 4px; display: flex; justify-content: center; align-items: center; flex-shrink: 0; }
-.placeholder-icon { color: var(--cert-icon-color); font-size: 1.5rem; opacity: 0.5; }
+.cert-item {
+    display: flex;
+    align-items: center; /* Keep vertical alignment */
+    gap: 15px;
+    margin-bottom: 15px;
+}
+.cert-image-placeholder {
+    width: 60px; /* Define a fixed width for the placeholder */
+    height: 40px; /* Define a fixed height - adjust aspect ratio as needed */
+    background-color: var(--cert-placeholder-bg);
+    border: 1px dashed var(--card-border);
+    border-radius: 4px;
+    display: flex; /* Use flex to center the image inside */
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    overflow: hidden; /* Hide any part of the image that might overflow */
+    padding: 5px; /* Add some internal padding */
+}
+/* Style specifically for the image inside the placeholder */
+.cert-logo-img {
+    display: block; /* Make it a block element */
+    max-width: 100%; /* Ensure image doesn't exceed placeholder width */
+    max-height: 100%; /* Ensure image doesn't exceed placeholder height */
+    width: auto;   /* Let the browser determine width based on height/aspect ratio */
+    height: auto;  /* Let the browser determine height based on width/aspect ratio */
+    object-fit: contain; /* Scale down to fit, preserving aspect ratio */
+}
+.placeholder-icon { color: var(--cert-icon-color); font-size: 1.5rem; opacity: 0.5; } /* Kept for potential fallback */
 .cert-link { flex-grow: 1; }
 .cert-link a { color: var(--text-color); text-decoration: none; font-weight: 400; transition: color 0.3s;}
 .cert-link a:hover { color: var(--highlight-color); text-decoration: underline; } /* Blue hover */
@@ -261,15 +287,6 @@ body.dark-theme .project-card:hover { box-shadow: 0 12px 30px rgba(0, 170, 255, 
 .project-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1;}
 .tags span { display: inline-block; background-color: var(--location-tag-bg); color: var(--location-tag-text); padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; margin: 3px; font-weight: 500; } /* Blue accent */
 
-/*Certificate SECTION*/
-
-.cert-logo-img {
-  max-width: 100%; /* Ensure image doesn't exceed placeholder width */
-  max-height: 100%; /* Ensure image doesn't exceed placeholder height */
-  object-fit: contain; /* Scale image down to fit while preserving aspect ratio */
-  display: block; /* Remove extra space below image */
-  margin: auto; /* Center image if smaller than container */
-}
 /* --- SKILLS SECTION (SECTION 4) --- */
 .skills-section {} /* Background set globally */
 .languages-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 950px; margin: 20px auto 0 auto; }
@@ -358,8 +375,13 @@ body.dark-theme .special-link-button:hover { box-shadow: 0 0 20px var(--icon-col
      .role-title { letter-spacing: 2px;}
      .personal-details { flex-direction: column; gap: 8px; align-items: center; font-size: 0.85rem;}
     .hero-tagline{font-size: 0.9rem;}
-     .cert-image-placeholder { width: 40px; height: 40px;} /* Smaller placeholder */
-     .placeholder-icon {font-size: 1.2rem;}
+    /* Responsive adjustment for cert placeholder */
+    .cert-image-placeholder {
+        width: 50px; /* Slightly smaller width on mobile */
+        height: 35px; /* Slightly smaller height on mobile */
+        padding: 4px;
+    }
+     .placeholder-icon {font-size: 1.2rem;} /* Kept for fallback */
      .language-item { width: 90px; height: 90px; padding: 12px;}
      .language-item img { width: 35px; height: 35px;}
      .language-item span { font-size: 0.8rem;}
