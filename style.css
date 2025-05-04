@@ -168,8 +168,7 @@ body.light-theme #contact { background-color: var(--bg-alt-color-light); }
 #hero-profile-zoom-target {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Fill container, maintain aspect ratio, crop if needed */
-    /* === ADDED THIS LINE === */
+    object-fit: cover;
     object-position: center top; /* Prioritize top-center of image when cropping */
     display: block;
     transform-origin: center center;
@@ -199,7 +198,7 @@ body.light-theme #contact { background-color: var(--bg-alt-color-light); }
     margin-bottom: 25px; border-bottom: 2px solid var(--gradient-blue-end);
     padding-bottom: 8px; display: inline-block;
 }
-body.light-theme .role-title {} /* Gradient remains the same */
+body.light-theme .role-title {}
 
 .personal-details {
     display: flex; flex-wrap: wrap; gap: 15px 20px; font-size: 0.9rem;
@@ -277,11 +276,53 @@ body.light-theme .role-title {} /* Gradient remains the same */
 body.light-theme .btn-outline:hover { color: var(--button-text-light); }
 
 /* --- PROJECTS SECTION (SECTION 3) --- */
-.projects-section {}
-.projects-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 35px; }
-.project-card { background: var(--card-bg); padding: 30px; border-radius: 10px; border: 1px solid var(--card-border); text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; display: flex; flex-direction: column; }
-.project-card:hover { transform: translateY(-8px); box-shadow: 0 12px 30px rgba(0,0,0,0.1); }
-body.dark-theme .project-card:hover { box-shadow: 0 12px 30px rgba(0, 170, 255, 0.08); }
+.projects-section {} /* Background set globally */
+
+/* Ensure grid takes links correctly and stretches items */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 35px;
+    align-items: stretch; /* Make grid items stretch vertically */
+}
+
+/* Style the new anchor tag wrapping the project card */
+.project-card-link {
+    text-decoration: none; /* Remove default underline from link */
+    color: inherit; /* Make the link inherit text color from parent */
+    display: block; /* Make the link behave like a block element */
+    height: 100%; /* Ensure the link fills the grid cell height */
+    transition: transform 0.3s ease; /* Only transition transform here */
+}
+
+/* Apply hover effects (transform) to the link wrapper */
+.project-card-link:hover {
+    transform: translateY(-8px);
+}
+
+/* Keep original project card styles, adjust height and transition */
+.project-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 10px;
+    border: 1px solid var(--card-border);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    height: 100%; /* Make card fill the link wrapper */
+    box-shadow: 0 6px 15px rgba(0,0,0,0.05); /* Subtle base shadow */
+    transition: box-shadow 0.3s ease; /* Only transition shadow on card */
+}
+
+/* Apply enhanced shadow to the inner card on link hover */
+.project-card-link:hover .project-card {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+}
+body.dark-theme .project-card-link:hover .project-card {
+    box-shadow: 0 12px 30px rgba(0, 170, 255, 0.08); /* Blue shadow */
+}
+
+/* Keep other existing project styles */
 .card-icon { font-size: 2.2rem; margin-bottom: 15px; color: var(--icon-color); }
 .project-card h3 { font-size: 1.4rem; margin-bottom: 15px; color: var(--text-color);}
 .project-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1;}
@@ -359,7 +400,7 @@ body.dark-theme .special-link-button:hover { box-shadow: 0 0 20px var(--icon-col
      .name-title { font-size: clamp(2.2rem, 7vw, 3.2rem); }
      .role-title { font-size: clamp(1.1rem, 3vw, 1.5rem); }
      .cert-item { flex-direction: column; align-items: flex-start; gap: 10px;}
-     .projects-grid { grid-template-columns: 1fr; gap: 25px; }
+     .projects-grid { grid-template-columns: 1fr; gap: 25px; } /* Project grid becomes single column */
      .languages-container { gap: 15px; }
      .frameworks-grid { grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 20px; }
      .framework-item { height: 130px; padding: 15px; }
@@ -370,7 +411,7 @@ body.dark-theme .special-link-button:hover { box-shadow: 0 0 20px var(--icon-col
      .fullscreen-section { padding: 50px 15px; }
      .section-title { font-size: clamp(1.6rem, 6vw, 2rem); }
      .hero-inner-container { width: 95%; border-radius: 10px;}
-     .hero-image-area { height: 30vh; min-height: 220px;} /* Adjust height for mobile */
+     .hero-image-area { height: 30vh; min-height: 220px;}
      .name-title { font-size: clamp(2rem, 8vw, 2.8rem); }
      .role-title { letter-spacing: 2px;}
      .personal-details { flex-direction: column; gap: 8px; align-items: center; font-size: 0.85rem;}
