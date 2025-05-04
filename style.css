@@ -261,6 +261,15 @@ body.dark-theme .project-card:hover { box-shadow: 0 12px 30px rgba(0, 170, 255, 
 .project-card p { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 20px; flex-grow: 1;}
 .tags span { display: inline-block; background-color: var(--location-tag-bg); color: var(--location-tag-text); padding: 4px 10px; border-radius: 15px; font-size: 0.75rem; margin: 3px; font-weight: 500; } /* Blue accent */
 
+/*Certificate SECTION*/
+
+.cert-logo-img {
+  max-width: 100%; /* Ensure image doesn't exceed placeholder width */
+  max-height: 100%; /* Ensure image doesn't exceed placeholder height */
+  object-fit: contain; /* Scale image down to fit while preserving aspect ratio */
+  display: block; /* Remove extra space below image */
+  margin: auto; /* Center image if smaller than container */
+}
 /* --- SKILLS SECTION (SECTION 4) --- */
 .skills-section {} /* Background set globally */
 .languages-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 25px; max-width: 950px; margin: 20px auto 0 auto; }
