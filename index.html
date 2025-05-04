@@ -5,29 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Harsh Anil Tuti - Software Development Engineer</title>
     <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome for Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
-    <!-- Google Fonts (Poppins for body, Orbitron for techy titles) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<body class="dark-theme"> <!-- Start with dark theme -->
+<body class="dark-theme">
 
-    <!-- Theme Toggle Button -->
     <button id="theme-toggle" class="theme-toggle-button" title="Toggle Theme">
-        <i class="fas fa-sun"></i> <!-- Initial icon -->
+        <i class="fas fa-sun"></i>
     </button>
 
-    <!-- SECTION 1: HERO - Embedded Rectangle Concept -->
+    <!-- SECTION 1: HERO -->
     <section id="hero" class="fullscreen-section hero-section">
         <div class="hero-inner-container">
             <div class="hero-content-split">
-                <!-- Image Area -->
                 <div class="hero-image-area">
                     <img src="profile.jpg" alt="Harsh Anil Tuti" id="hero-profile-zoom-target">
                 </div>
-                <!-- Details Area -->
                 <div class="hero-details-area" id="hero-details-zoom-target">
                      <h1 class="name-title animated-gradient-text">Harsh Anil Tuti</h1>
                     <h2 class="role-title">Software Development Engineer</h2>
@@ -48,7 +43,6 @@
             <h2 class="section-title">Educational Journey</h2>
             <div class="education-grid">
                 <div class="education-details">
-                     <!-- Items -->
                      <div class="edu-item">
                         <i class="fas fa-graduation-cap education-icon"></i>
                         <div>
@@ -74,13 +68,18 @@
                          </div>
                     </div>
 
+                    <!-- ABOUT ME SUBSECTION -->
+                     <div class="edu-about">
+                         <h4><i class="fas fa-user-circle about-me-icon"></i> About Me</h4>
+                         <p>A proactive third-year Computer Science student at BIT Mesra, skilled in Python, Java, Kotlin, C, and SQL, with practical experience in building scalable applications using cloud (AWS/GCP), database (MySQL/Oracle), and ML technologies. My background includes developing projects in AI, mobile, and web domains, demonstrating strong problem-solving, adaptability, and a commitment to delivering results. I am keen to apply my technical expertise and collaborative spirit to impactful projects in a leading company.</p>
+                     </div>
+
                      <!-- CERTIFICATIONS -->
                      <div class="edu-certs">
                          <h4><i class="fas fa-certificate cert-title-icon"></i> Certifications</h4>
                          <ul>
                              <li class="cert-item">
                                  <div class="cert-image-placeholder">
-                                      <!-- Replaced icon with image -->
                                       <img src="images/Coursera.png" alt="Coursera Logo" class="cert-logo-img">
                                  </div>
                                  <div class="cert-link">
@@ -89,7 +88,6 @@
                              </li>
                              <li class="cert-item">
                                   <div class="cert-image-placeholder">
-                                      <!-- Replaced icon with image -->
                                       <img src="images/Coursera.png" alt="Coursera Logo" class="cert-logo-img">
                                  </div>
                                   <div class="cert-link">
@@ -98,7 +96,6 @@
                              </li>
                               <li class="cert-item">
                                   <div class="cert-image-placeholder">
-                                      <!-- Replaced icon with image -->
                                       <img src="images/Coursera.png" alt="Coursera Logo" class="cert-logo-img">
                                   </div>
                                   <div class="cert-link">
@@ -128,8 +125,6 @@
         <h2 class="section-title">Featured Achievements</h2>
         <div class="projects-grid">
 
-            <!-- Project 1: iCALC -->
-            <!-- Wrap the entire card content in an anchor tag -->
             <a href="https://github.com/devilGamer5802/iCALC" target="_blank" rel="noopener noreferrer" class="project-card-link" title="View iCALC App Project (Replace Link)">
                 <div class="project-card">
                     <div class="card-icon"><i class="fas fa-calculator"></i></div>
@@ -139,8 +134,6 @@
                 </div>
             </a>
 
-            <!-- Project 2: AI Climate Monitoring -->
-            <!-- Wrap the entire card content in an anchor tag -->
             <a href="https://github.com/devilGamer5802/AI-Climate-Monitoring-and-Mitigation-System" target="_blank" rel="noopener noreferrer" class="project-card-link" title="View AI Climate Monitor Project (Replace Link)">
                  <div class="project-card">
                      <div class="card-icon"><i class="fas fa-brain"></i> <i class="fas fa-cloud-sun-rain"></i></div>
@@ -150,8 +143,6 @@
                 </div>
             </a>
 
-            <!-- Project 3: TorDirect -->
-            <!-- Wrap the entire card content in an anchor tag -->
             <a href="https://github.com/devilGamer5802/TorDirect" target="_blank" rel="noopener noreferrer" class="project-card-link" title="View TorDirect Platform Project (Replace Link)">
                 <div class="project-card">
                     <div class="card-icon"><i class="fas fa-server"></i> <i class="fas fa-bolt"></i></div>
@@ -161,16 +152,15 @@
                 </div>
             </a>
 
-        </div> <!-- End .projects-grid -->
-    </div> <!-- End .section-content -->
-</section> <!-- End #projects -->
+        </div>
+    </div>
+</section>
 
     <!-- SECTION 4: SKILLS -->
     <section id="skills" class="fullscreen-section skills-section">
         <div class="section-content skills-content">
             <h2 class="section-title">Core Languages</h2>
             <div class="languages-container">
-                 <!-- !! Ensure these image files exist in ./images/ !! -->
                 <div class="language-item"><img src="https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png" alt="Python"><span>Python</span></div>
                 <div class="language-item"><img src="https://www.vectorlogo.zone/logos/java/java-vertical.svg" alt="Java"><span>Java</span></div>
                 <div class="language-item"><img src="https://www.vectorlogo.zone/logos/kotlinlang/kotlinlang-ar21.svg" alt="Kotlin"><span>Kotlin</span></div>
@@ -189,7 +179,6 @@
         <div class="section-content frameworks-content">
             <h2 class="section-title">Frameworks & Libraries</h2>
             <div class="frameworks-grid">
-                <!-- !! Ensure these image files exist in ./images/ and links are correct !! -->
                 <div class="framework-item">
                     <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer" title="Android SDK">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/6/64/Android_logo_2019_%28stacked%29.svg" alt="Android SDK">
@@ -210,7 +199,7 @@
                 </div>
                 <div class="framework-item">
                     <a href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer" title="React Native">
-                        <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React Native"> <!-- Assuming react logo is suitable -->
+                        <img src="https://www.vectorlogo.zone/logos/reactjs/reactjs-icon.svg" alt="React Native">
                         <span>React Native</span>
                      </a>
                 </div>
@@ -229,10 +218,9 @@
                 <div class="framework-item">
                     <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer" title="TensorFlow/Keras">
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/11/TensorFlowLogo.svg/348px-TensorFlowLogo.svg.png" alt="TensorFlow">
-                         <span>TensorFlow</span> <!-- Keras often implied -->
+                         <span>TensorFlow</span>
                     </a>
                 </div>
-                 <!-- Add more items as needed -->
             </div>
             <p class="frameworks-note">Utilizing powerful tools to build efficient and modern applications.</p>
         </div>
@@ -246,13 +234,10 @@
             <div class="connect-links">
                 <a href="https://github.com/devilGamer5802" target="_blank" class="connect-button github"><i class="fab fa-github"></i> GitHub</a>
                 <a href="mailto:harshaniltuti@gmail.com" target="_blank" class="connect-button email"><i class="fas fa-envelope"></i> Email</a>
-                 <!-- PayPal Link -->
                 <a href="#" target="_blank" class="connect-button paypal" title="Support via PayPal">
                     <i class="fab fa-paypal"></i> PayPal
                 </a>
-                <!-- UPI Link/Button -->
                 <a href="upi://pay?pa=7054583849@upi&pn=HarshAnilTuti&cu=INR" target="_blank" class="connect-button upi" title="Support via UPI">
-                    <!-- !! Requires upi-logo.png in images folder !! -->
                     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e1/UPI-Logo-vector.svg/64px-UPI-Logo-vector.svg.png?20200901100648=&download=" alt="UPI Logo" class="upi-logo-img"> UPI
                 </a>
             </div>
@@ -271,7 +256,6 @@
         <p>Building the future, one line of code at a time.</p>
     </footer>
 
-    <!-- JS File -->
     <script src="script.js"></script>
 </body>
 </html>
