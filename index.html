@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harsh Anil Tuti - Software Development Engineer</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+    <!-- Google Fonts (Poppins for body, Orbitron for techy titles) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-theme"> <!-- Start with dark theme -->
+
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle-button" title="Toggle Theme">
+        <i class="fas fa-sun"></i> <!-- Initial icon -->
+    </button>
+
+    <!-- SECTION 1: HERO - Embedded Rectangle Concept -->
+    <section id="hero" class="fullscreen-section hero-section">
+        <div class="hero-inner-container">
+            <div class="hero-content-split">
+                <!-- Image Area -->
+                <div class="hero-image-area">
+                    <img src="profile.jpg" alt="Harsh Anil Tuti" id="hero-profile-zoom-target">
+                </div>
+                <!-- Details Area -->
+                <div class="hero-details-area" id="hero-details-zoom-target">
+                     <h1 class="name-title animated-gradient-text">Harsh Anil Tuti</h1>
+                    <h2 class="role-title">Software Development Engineer</h2>
+                    <div class="personal-details">
+                        <span><i class="fas fa-birthday-cake"></i> Age: 20</span>
+                        <span><i class="fas fa-venus-mars"></i> Gender: Male</span>
+                        <span><i class="fas fa-map-marker-alt"></i> Location: Gorakhpur, UP</span>
+                    </div>
+                    <p class="hero-tagline">Building innovative and scalable digital experiences.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 2: EDUCATION -->
+    <section id="education" class="fullscreen-section education-section">
+        <div class="section-content education-content">
+            <h2 class="section-title">Educational Journey</h2>
+            <div class="education-grid">
+                <div class="education-details">
+                     <!-- Items -->
+                     <div class="edu-item">
+                        <i class="fas fa-graduation-cap education-icon"></i>
+                        <div>
+                            <h3>Birla Institute of Technology, Mesra</h3>
+                            <p><strong>B.Tech. Computer Science & Engineering</strong> (Nov 2022 - Present)</p>
+                            <p><span class="location-tag">Ranchi, Jharkhand</span></p>
+                        </div>
+                    </div>
+                     <div class="edu-item">
+                         <i class="fas fa-school education-icon"></i>
+                         <div>
+                             <h3>Divine Public School, Bicchia</h3>
+                            <p><strong>Class XII (Sci, Math, CS)</strong> - 2022</p>
+                            <p><span class="location-tag">Gorakhpur, Uttar Pradesh</span></p>
+                         </div>
+                    </div>
+                    <div class="edu-item">
+                        <i class="fas fa-school education-icon"></i>
+                         <div>
+                            <h3>St. Anothny's Convent School</h3>
+                            <p><strong>Class X</strong> - 2020</p>
+                             <p><span class="location-tag">Gorakhpur, Uttar Pradesh</span></p>
+                         </div>
+                    </div>
+
+                     <!-- CERTIFICATIONS -->
+                     <div class="edu-certs">
+                         <h4><i class="fas fa-certificate cert-title-icon"></i> Certifications</h4>
+                         <ul>
+                             <li class="cert-item">
+                                 <div class="cert-image-placeholder">
+                                      <i class="fas fa-link placeholder-icon"></i> <!-- Changed to link -->
+                                 </div>
+                                 <div class="cert-link">
+                                      <a href="#" target="_blank" rel="noopener noreferrer">Meta Android Developer</a>
+                                 </div>
+                             </li>
+                             <li class="cert-item">
+                                  <div class="cert-image-placeholder">
+                                      <i class="fas fa-link placeholder-icon"></i> <!-- Changed to link -->
+                                 </div>
+                                  <div class="cert-link">
+                                      <a href="#" target="_blank" rel="noopener noreferrer">Meta Database Engineer</a>
+                                 </div>
+                             </li>
+                              <li class="cert-item">
+                                  <div class="cert-image-placeholder">
+                                      <i class="fas fa-link placeholder-icon"></i> <!-- Changed to link -->
+                                  </div>
+                                  <div class="cert-link">
+                                      <a href="#" target="_blank" rel="noopener noreferrer">Generative AI for Everyone</a>
+                                  </div>
+                              </li>
+                         </ul>
+                     </div>
+                </div>
+                 <!-- MAP AREA -->
+                 <div class="education-map">
+                     <i class="fas fa-map-marked-alt map-icon"></i>
+                    <h3>Study Locations</h3>
+                    <p class="map-locations">Ranchi, JH & Gorakhpur, UP</p>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="map-link btn-outline">
+                        View Interactive Map (Link)
+                     </a>
+                    <p class="map-note">(Replace # with your custom map link)</p>
+                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 3: PROJECTS -->
+    <section id="projects" class="fullscreen-section projects-section">
+        <div class="section-content projects-content">
+            <h2 class="section-title">Featured Achievements</h2>
+            <div class="projects-grid">
+                <!-- Project 1: iCALC -->
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-calculator"></i></div>
+                    <h3>iCALC App</h3>
+                    <p>Advanced Kotlin calculator mimicking iOS Math Notes with dynamic expression solving & live currency conversion.</p>
+                    <div class="tags"><span>Kotlin</span><span>Android</span><span>API</span></div>
+                </div>
+                <!-- Project 2: AI Climate Monitoring -->
+                 <div class="project-card">
+                     <div class="card-icon"><i class="fas fa-brain"></i> <i class="fas fa-cloud-sun-rain"></i></div>
+                    <h3>AI Climate Monitor</h3>
+                    <p>LSTM for accurate temperature forecasting (R2=0.93) and Isolation Forest for environmental anomaly detection.</p>
+                     <div class="tags"><span>Python</span><span>ML</span><span>LSTM</span><span>DataViz</span></div>
+                </div>
+                <!-- Project 3: TorDirect -->
+                <div class="project-card">
+                    <div class="card-icon"><i class="fas fa-server"></i> <i class="fas fa-bolt"></i></div>
+                    <h3>TorDirect Platform</h3>
+                    <p>Full-stack Node.js app for real-time torrent management using WebTorrent, deployed on Render.</p>
+                     <div class="tags"><span>Node.js</span><span>WebTorrent</span><span>Socket.IO</span><span>FullStack</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SECTION 4: SKILLS -->
+    <section id="skills" class="fullscreen-section skills-section">
+        <div class="section-content skills-content">
+            <h2 class="section-title">Core Languages</h2>
+            <div class="languages-container">
+                 <!-- !! Ensure these image files exist in ./images/ !! -->
+                <div class="language-item"><img src="images/python.svg" alt="Python"><span>Python</span></div>
+                <div class="language-item"><img src="images/java.svg" alt="Java"><span>Java</span></div>
+                <div class="language-item"><img src="images/kotlin.svg" alt="Kotlin"><span>Kotlin</span></div>
+                <div class="language-item"><img src="images/javascript.svg" alt="JS"><span>JavaScript</span></div>
+                <div class="language-item"><img src="images/html.svg" alt="HTML"><span>HTML5</span></div>
+                <div class="language-item"><img src="images/css.svg" alt="CSS"><span>CSS3</span></div>
+                <div class="language-item"><img src="images/sql.svg" alt="SQL"><span>SQL</span></div>
+                <div class="language-item"><img src="images/c.svg" alt="C"><span>C</span></div>
+            </div>
+             <!-- Removed framework list from here, moved to new section -->
+             <p class="skills-note">Experienced in developing robust applications using various languages and tools.</p>
+        </div>
+    </section>
+
+    <!-- SECTION 5: FRAMEWORKS & LIBRARIES -->
+    <section id="frameworks" class="fullscreen-section frameworks-section">
+        <div class="section-content frameworks-content">
+            <h2 class="section-title">Frameworks & Libraries</h2>
+            <div class="frameworks-grid">
+                <!-- !! Ensure these image files exist in ./images/ and links are correct !! -->
+                <div class="framework-item">
+                    <a href="https://developer.android.com/studio" target="_blank" rel="noopener noreferrer" title="Android SDK">
+                        <img src="images/android.svg" alt="Android SDK">
+                        <span>Android SDK</span>
+                    </a>
+                </div>
+                <div class="framework-item">
+                     <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer" title="Node.js">
+                        <img src="images/nodejs.svg" alt="Node.js">
+                        <span>Node.js</span>
+                    </a>
+                </div>
+                <div class="framework-item">
+                     <a href="https://flask.palletsprojects.com/" target="_blank" rel="noopener noreferrer" title="Flask">
+                        <img src="images/flask.svg" alt="Flask">
+                        <span>Flask</span>
+                    </a>
+                </div>
+                <div class="framework-item">
+                    <a href="https://reactnative.dev/" target="_blank" rel="noopener noreferrer" title="React Native">
+                        <img src="images/react.svg" alt="React Native"> <!-- Assuming react logo is suitable -->
+                        <span>React Native</span>
+                     </a>
+                </div>
+                <div class="framework-item">
+                    <a href="https://pandas.pydata.org/" target="_blank" rel="noopener noreferrer" title="Pandas">
+                        <img src="images/pandas.svg" alt="Pandas">
+                        <span>Pandas</span>
+                    </a>
+                </div>
+                <div class="framework-item">
+                     <a href="https://numpy.org/" target="_blank" rel="noopener noreferrer" title="NumPy">
+                        <img src="images/numpy.svg" alt="NumPy">
+                        <span>NumPy</span>
+                    </a>
+                </div>
+                <div class="framework-item">
+                    <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer" title="TensorFlow/Keras">
+                        <img src="images/tensorflow.svg" alt="TensorFlow">
+                         <span>TensorFlow</span> <!-- Keras often implied -->
+                    </a>
+                </div>
+                 <!-- Add more items as needed -->
+            </div>
+            <p class="frameworks-note">Utilizing powerful tools to build efficient and modern applications.</p>
+        </div>
+    </section>
+
+
+    <!-- SECTION 6: CONNECT -->
+    <section id="contact" class="fullscreen-section connect-section">
+         <div class="section-content connect-content">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="connect-links">
+                <a href="https://github.com/devilGamer5802" target="_blank" class="connect-button github"><i class="fab fa-github"></i> GitHub</a>
+                <a href="mailto:harshaniltuti@gmail.com" target="_blank" class="connect-button email"><i class="fas fa-envelope"></i> Email</a>
+                 <!-- PayPal Link -->
+                <a href="#" target="_blank" class="connect-button paypal" title="Support via PayPal">
+                    <i class="fab fa-paypal"></i> PayPal
+                </a>
+                <!-- UPI Link/Button -->
+                <a href="#" target="_blank" class="connect-button upi" title="Support via UPI">
+                    <!-- !! Requires upi-logo.png in images folder !! -->
+                    <img src="images/upi-logo.png" alt="UPI Logo" class="upi-logo-img"> UPI
+                </a>
+            </div>
+            <div class="hire-coffee-link">
+                 <a href="mailto:harshaniltuti@gmail.com?subject=Opportunity%20/%20Coffee%20Chat&body=Hi%20Harsh%2C%0A%0AI'd%20like%20to%20connect%20regarding..." class="special-link-button">
+                    <span class="link-icon">🤝/☕/🥤</span>
+                    <span class="link-text">Hire Me / Let's Connect</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- FOOTER -->
+    <footer id="footer" class="site-footer">
+        <p>Copyright © 2025 Harsh Anil Tuti</p> <!-- Updated Name -->
+        <p>Building the future, one line of code at a time.</p>
+    </footer>
+
+    <!-- JS File -->
+    <script src="script.js"></script>
+</body>
+</html>
